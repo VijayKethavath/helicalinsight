@@ -36,4 +36,34 @@
 			</roles>
         </share>
     </tomcatJdbcDataSource>
+    <!--
+         Sample MongoDB connection using the native NoSQL driver support.
+         To activate this connection:
+           1. Remove the surrounding comment tags.
+           2. Replace hostname, port, databaseName, username and password with your actual values.
+           3. Restart the application (or use the Data Source UI to add/manage this connection).
+         Fields:
+           subType         = mongo  (resolves to MongoLoader Spring bean)
+           dataSourceProvider = noSql
+    -->
+    <!--
+    <noSqlDataSource id="2" name="SampleMongoDB" type="noSqlDataSource" baseType="global.jdbc">
+        <visible>true</visible>
+        <dataSourceProvider>noSql</dataSourceProvider>
+        <subType>mongo</subType>
+        <url>mongodb://localhost:27017/sampledb</url>
+        <databaseName>sampledb</databaseName>
+        <username>mongouser</username>
+        <password>mongopassword</password>
+        <security>
+            <createdBy>1</createdBy>
+            <organization></organization>
+        </security>
+        <share mandatory="true">
+            <roles mandatory="true">
+                <role id="2">2</role>
+            </roles>
+        </share>
+    </noSqlDataSource>
+    -->
 </connections>
